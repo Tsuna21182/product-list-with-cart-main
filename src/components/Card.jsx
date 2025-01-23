@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Card({ postres, setCart }) {
+function Card({ postres, addToCart }) {
   const { name, category, price, image } = postres;
 
   return (
@@ -19,7 +19,7 @@ function Card({ postres, setCart }) {
       </div>
       <button
         className="bg-white font-bold py-2 px-5 rounded-3xl border-2 flex items-center justify-center space-x-2 w-fit absolute top-52 left-28 md:top-80 md:left-20 md:w-44 lg:top-60 lg:left-14 xl:top-46 xl:left-13 2xl:top-[290px] 2xl:left-24 2xl:p-4 xxl:top-[420px] xxl:left-36 hover:border-red-700 transition-all"
-        onClick={() => setCart((prevCart) => [...prevCart, postres])}
+        onClick={() => addToCart(postres)}
       >
         <img
           src="/images/icon-add-to-cart.svg"
