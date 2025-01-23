@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import AddToCartButton from "./AddToCartButton";
 
-function Card({ postres, addToCart }) {
+function Card({ postres, addToCart, selectedItem, setSelectedItem }) {
   const { name, category, price, image } = postres;
 
   return (
@@ -17,17 +18,12 @@ function Card({ postres, addToCart }) {
           />
         </picture>
       </div>
-      <button
-        className="bg-white font-bold py-2 px-5 rounded-3xl border-2 flex items-center justify-center space-x-2 w-fit absolute top-52 left-28 md:top-80 md:left-20 md:w-44 lg:top-60 lg:left-14 xl:top-46 xl:left-13 2xl:top-[290px] 2xl:left-24 2xl:p-4 xxl:top-[420px] xxl:left-36 hover:border-red-700 transition-all"
-        onClick={() => addToCart(postres)}
-      >
-        <img
-          src="/images/icon-add-to-cart.svg"
-          alt="imagen boton"
-          className="w-5 h-5"
-        />
-        <span>Add to Cart</span>
-      </button>
+      <AddToCartButton
+        postres={postres}
+        addToCart={addToCart}
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+      />
       <div className="w-2/3 mt-5 md:mt-10 lg:mt-2">
         <p className="text-gray-500 text-sm">{category}</p>
         <h3 className="text-lg font-bold text-gray-800 md:w-48 lg:w-64">
