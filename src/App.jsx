@@ -28,7 +28,7 @@ function App() {
             <Card key={postres.id} postres={postres} addToCart={addToCart} />
           ))}
         </div>
-        <div className="mt-5 flex justify-center w-80 md:justify-self-end lg:ml-auto">
+        <div className="mt-5 w-80 md:justify-self-end lg:ml-auto">
           <Cart cart={cart} />
         </div>
       </div>
