@@ -5,7 +5,11 @@ export default {
     fontFamily: {
       serif: ["Red Hat Text", "serif"],
     },
-    extend: {},
+    extend: {
+      screens: {
+        xxl: "120.5rem",
+      },
+    },
   },
   plugins: [],
 };

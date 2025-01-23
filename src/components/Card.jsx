@@ -4,8 +4,8 @@ function Card({ postres, setCart }) {
   const { name, category, price, image } = postres;
 
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 p-4 grid lg:gap-5 grid-cols-1 relative ">
-      <div className="w-80 md:w-80 lg:w-64 xl:w-56 2xl:w-96 hover:border-red-700 hover:border-4 hover:rounded-lg transition-all">
+    <div className="w-full md:w-1/2 lg:w-1/3 p-4 grid lg:gap-5 grid-cols-1 relative">
+      <div className="w-80 md:w-80 lg:w-64 xl:w-64 2xl:w-80 xxl:w-[450px] hover:border-red-700 hover:border-4 hover:rounded-lg transition-all">
         <picture>
           <source media="(min-width: 1024px)" srcSet={image.desktop} />
           <source media="(min-width: 768px)" srcSet={image.tablet} />
@@ -18,7 +18,7 @@ function Card({ postres, setCart }) {
         </picture>
       </div>
       <button
-        className="bg-white font-bold py-2 px-5 rounded-3xl border-2 flex items-center justify-center space-x-2 w-fit absolute top-52 left-28 md:top-80 md:left-20 md:w-44 lg:top-60 lg:left-14 xl:top-52 xl:left-11 2xl:top-[360px] 2xl:left-32 2xl:p-4 hover:border-red-700 transition-all"
+        className="bg-white font-bold py-2 px-5 rounded-3xl border-2 flex items-center justify-center space-x-2 w-fit absolute top-52 left-28 md:top-80 md:left-20 md:w-44 lg:top-60 lg:left-14 xl:top-46 xl:left-13 2xl:top-[290px] 2xl:left-24 2xl:p-4 xxl:top-[420px] xxl:left-36 hover:border-red-700 transition-all"
         onClick={() => setCart((prevCart) => [...prevCart, postres])}
       >
         <img

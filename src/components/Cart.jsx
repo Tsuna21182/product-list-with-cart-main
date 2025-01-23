@@ -1,6 +1,6 @@
 function Cart() {
   return (
-    <div className="bg-white p-5">
+    <div className="bg-white p-5 rounded-md">
       <h3 className="text-orange-700 font-bold text-xl">Your Cart(0)</h3>
       <div className=" flex flex-col items-center">
         <div className="m-3">
