@@ -27,6 +27,10 @@ function App() {
     }
   }
 
+  function cleandCart() {
+    setCart([]);
+  }
+
   return (
     <main className="font-serif flex flex-col justify-center w-[95%] mx-auto my-10">
       <h1 className="text-4xl md:text-6xl font-bold">Desserts</h1>
@@ -43,7 +47,7 @@ function App() {
           ))}
         </div>
         <div className="mt-5 w-80 md:justify-self-end lg:ml-auto">
-          <Cart cart={cart} />
+          <Cart cart={cart} cleandCart={cleandCart} />
         </div>
       </div>
     </main>

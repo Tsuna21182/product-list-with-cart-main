@@ -1,4 +1,6 @@
-function Cart({ cart }) {
+import ConfirmOrder from "./ConfirmOrder";
+
+function Cart({ cart, cleandCart }) {
   const cartTotal = () =>
     cart.reduce((total, item) => total + item.quantity * item.price, 0);
 
@@ -55,9 +57,7 @@ function Cart({ cart }) {
                 delivery
               </p>
             </div>
-            <button className="bg-red-600 mt-8 text-white font-semibold p-5 rounded-full w-full hover:bg-red-700 transition-all">
-              Confirm Order
-            </button>
+            <ConfirmOrder cart={cart} cleandCart={cleandCart} />
           </div>
         </>
       )}
